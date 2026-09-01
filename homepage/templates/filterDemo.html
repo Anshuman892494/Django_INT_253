@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Demo</title>
+</head>
+
+<body>
+
+    <h1> All FiltersDemo</h1>
+    <p>Name: {{sname | capfirst}} {{surname | capfirst}}</p>
+    <p>Name: {{sname | upper}} {{surname | upper}}</p>
+    <p>Name: {{sname | lower}} {{surname | lower }}</p>
+    <p>Name: {{sname | title}} {{surname | title}}</p>
+
+    <p>City and State: {{city | add:", " | add:State}}</p>
+
+    <h2>List Filters (Subjects)</h2>
+    <p>Subjects: {{subjects}}</p>
+    <p>First Subject: {{subjects | first}}</p>
+    <p>Last Subject: {{subjects | last}}</p>
+    <p>Total Subjects: {{subjects | length}}</p>
+    <p>Join Subjects: {{subjects | join:", "}}</p>
+    <p>Slice Subjects (First 2): {{subjects | slice:":2"}}</p>
+
+    <h2>Number Filters</h2>
+    <p>Class: {{class}}</p>
+    <p>Class Next Year (add 1): {{class | add:"1"}}</p>
+    <p>Name Length: {{sname | length}}</p>
+
+</body>
+
+</html>

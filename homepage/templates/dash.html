@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="text-align: center; padding: 20px; background-color: #23d36d;">
+        <h1>Welcome to the Dashboard</h1>
+        <p>This is a simple Django homepage.</p>
+    </header>
+    <div>
+        <h2 style="padding: 20px;">
+            Name: {{name}} <br>
+            Name: {{name | upper}} <br>
+            Name: {{name | lower}}
+        </h2>
+    </div>
+</body>
+
+</html>
