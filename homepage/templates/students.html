@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="students-container">
+    <h2>Students Profile Table</h2>
+    <p class="student-count">Total Students: {{ students | length }}</p>
+
+    <table class="students-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Reg No</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Course</th>
+                <th>Year</th>
+                <th>Address</th>
+                <th>Attendance</th>
+                <th>Marks</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ student.reg_no | upper }}</td>
+                <td>{{ student.name | title }}</td>
+                <td>{{ student.email | lower }}</td>
+                <td>{{ student.course | upper }}</td>
+                <td>{{ student.year }}</td>
+                <td>{{ student.address | title }}</td>
+                <td>
+                    {{ student.attendance | floatformat:1 }}%
+                    {% if student.attendance >= 75 %}
+                    <span class="eligible">(Eligible)</span>
+                    {% else %}
+                    <span class="shortage">(Shortage)</span>
+                    {% endif %}
+                </td>
+                <td>{{ student.marks | floatformat:1 }}</td>
+                <td>{{ student.status }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="10" class="no-records">No records found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<style>
+    /* Internal CSS */
+    .students-container {
+        padding: 15px 5px;
+    }
+
+    .students-container h2 {
+        color: #222;
+        margin-bottom: 6px;
+    }
+
+    .student-count {
+        color: #555;
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .students-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        background-color: #ffffff;
+    }
+
+    .students-table th,
+    .students-table td {
+        border: 1px solid #ddd;
+        padding: 12px 16px;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .students-table th {
+        background-color: orangered;
+        color: white;
+        font-weight: 600;
+    }
+
+    .students-table tbody tr:hover {
+        background-color: #fff9f6;
+    }
+
+    .eligible {
+        color: green;
+        font-weight: 500;
+    }
+
+    .shortage {
+        color: red;
+        font-weight: bold;
+    }
+
+    .no-records {
+        text-align: center;
+        padding: 20px;
+        color: #777;
+    }
+</style>
+{% endblock %}
