@@ -52,33 +52,36 @@ urlpatterns = [
 
 # # =======================================================================(01/09/2026)
 
-#     path('dash/', views.dash, name='home'),
+    path('dash/', views.dash, name='home'),
 
-#     path('aboutus/', views.aboutus, name='aboutus'),
+    path('aboutus/', views.aboutus, name='aboutus'),
 
-#     path('filterdemo/', views.filterdemo, name='filterdemo'),
+    path('filterdemo/', views.filterdemo, name='filterdemo'),
 
-#     path('menu/', views.menu_view,),
+    path('menu/', views.menu_view,),
 
-#     path('result/', views.result),
+    # path('result/', views.result, name='result'),
 
-#     path('extends/', views.extend_demo, name='extend_demo'),
+    path('extends/', views.extend_demo, name='extend_demo'),
 
-#     path('students/', views.students_profile, name='students_profile'),
+    path('students/', views.students_profile, name='students_profile'),
 
 
 # # ================================= CA Question =================================
 
-    path('result/', views.student_result, name='student_result'),
+    # path('result/', views.student_result, name='student_result'),
 
-    path('profile/<str:name>/', views.student_profile, name='student_profile'),
+    # path('profile/<str:name>/', views.student_profile, name='student_profile'),
 
-    path('student/<int:student_id>/', views.student_id, name='student_by_id'),
+    # path('student/<int:student_id>/', views.student_id, name='student_by_id'),
 
-    re_path(r'^students/(?P<student_id_reg>[0-9]{4})/?$', views.student_id_reg, name='student'),
+    # re_path(r'^students/(?P<student_id_reg>[0-9]{4})/?$', views.student_id_reg, name='student'),
+
+# # ==================================================================
 
 
 
+    path('result/', views.result, name='result'),
 
 
 

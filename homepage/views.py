@@ -111,56 +111,56 @@ def home(request):
 
 
 
-# # ========================================================================================. 01/09/2026
+# ========================================================================================. 01/09/2026
 
-# # Django Templates
+# Django Templates
 
-# def dash(request):
-#     context = {
-#         "name" : "Anshu"
-#     }
-#     return render(request, 'dash.html', context)
-
-
-# def aboutus(request):
-#     context = {
-#         "name" : "Anshu",
-#         "course": "B.Tech CSE",
-#         "semester": 7,
-#         "marks": 90.56
-#     }
-#     return render(request, 'aboutus.html', context)
-
-# def filterdemo(request):
-#     context = {
-#         "sname" : "Anshu",
-#         "surname" : "Verma",
-#         "city": "Ballia",
-#         "State": "Uttar Pradesh",
-#         "class" : 12,
-#         "subjects" : [
-#             "Hindi",
-#             "English",
-#             "Maths",
-#             "Science"
-#         ]
-
-#     }
-#     return render(request,'filterDemo.html', context)
+def dash(request):
+    context = {
+        "name" : "Anshu"
+    }
+    return render(request, 'dash.html', context)
 
 
-# # For Loop
-# def menu_view(request):
-#     menu = [
-#         "Pizza",
-#         "Burger",
-#         "Pasta",
-#         "Tea"
-#     ]
-#     context = {
-#         "menu" : menu
-#     }
-#     return render(request, "menu.html", context)
+def aboutus(request):
+    context = {
+        "name" : "Anshu",
+        "course": "B.Tech CSE",
+        "semester": 7,
+        "marks": 90.56
+    }
+    return render(request, 'aboutus.html', context)
+
+def filterdemo(request):
+    context = {
+        "sname" : "Anshu",
+        "surname" : "Verma",
+        "city": "Ballia",
+        "State": "Uttar Pradesh",
+        "class" : 12,
+        "subjects" : [
+            "Hindi",
+            "English",
+            "Maths",
+            "Science"
+        ]
+
+    }
+    return render(request,'filterDemo.html', context)
+
+
+# For Loop
+def menu_view(request):
+    menu = [
+        "Pizza",
+        "Burger",
+        "Pasta",
+        "Tea"
+    ]
+    context = {
+        "menu" : menu
+    }
+    return render(request, "menu.html", context)
 
 # def result(request):
 #     context = {
@@ -170,102 +170,115 @@ def home(request):
 #     return render(request, "result.html", context)
 
 
-# def extend_demo(request):
-#     return render(request, "extend_demo.html")
+def extend_demo(request):
+    return render(request, "extend_demo.html")
 
 
-# def students_profile(request):
-#     students = [
-#         {
-#             "reg_no": "12015678",
-#             "name": "anshu verma",
-#             "email": "ANSHU.VERMA@LPU.IN",
-#             "address": "ballia, uttar pradesh",
-#             "year": 4,
-#             "course": "b.tech cse",
-#             "attendance": 88.5,
-#             "marks": 92.4,
-#             "status": "Active",
-#         },
-#         {
-#             "reg_no": "12018942",
-#             "name": "rahul sharma",
-#             "email": "RAHUL.SHARMA@GMAIL.COM",
-#             "address": "jalandhar, punjab",
-#             "year": 3,
-#             "course": "bca",
-#             "attendance": 71.0,
-#             "marks": 64.5,
-#             "status": "Active",
-#         },
-#         {
-#             "reg_no": "12014421",
-#             "name": "priya singh",
-#             "email": "PRIYA.SINGH@YAHOO.COM",
-#             "address": "patna, bihar",
-#             "year": 4,
-#             "course": "b.tech it",
-#             "attendance": 94.2,
-#             "marks": 82.0,
-#             "status": "Active",
-#         },
-#         {
-#             "reg_no": "12019933",
-#             "name": "amit kumar",
-#             "email": "AMIT.KUMAR@OUTLOOK.COM",
-#             "address": "delhi, ncr",
-#             "year": 2,
-#             "course": "b.tech cse",
-#             "attendance": 68.4,
-#             "marks": 38.0,
-#             "status": "Inactive",
-#         },
-#         {
-#             "reg_no": "12016654",
-#             "name": "sneha patel",
-#             "email": "SNEHA.PATEL@GMAIL.COM",
-#             "address": "ahmedabad, gujarat",
-#             "year": 3,
-#             "course": "mca",
-#             "attendance": 81.6,
-#             "marks": 74.5,
-#             "status": "Active",
-#         },
-#         {
-#             "reg_no": "12019933",
-#             "name": "amit kumar",
-#             "email": "AMIT.KUMAR@OUTLOOK.COM",
-#             "address": "delhi, ncr",
-#             "year": 2,
-#             "course": "b.tech cse",
-#             "attendance": 68.4,
-#             "marks": 38.0,
-#             "status": "Inactive",
-#         },
+def students_profile(request):
+    students = [
+        {
+            "reg_no": "12015678",
+            "name": "anshu verma",
+            "email": "ANSHU.VERMA@LPU.IN",
+            "address": "ballia, uttar pradesh",
+            "year": 4,
+            "course": "b.tech cse",
+            "attendance": 88.5,
+            "marks": 92.4,
+            "status": "Active",
+        },
+        {
+            "reg_no": "12018942",
+            "name": "rahul sharma",
+            "email": "RAHUL.SHARMA@GMAIL.COM",
+            "address": "jalandhar, punjab",
+            "year": 3,
+            "course": "bca",
+            "attendance": 71.0,
+            "marks": 64.5,
+            "status": "Active",
+        },
+        {
+            "reg_no": "12014421",
+            "name": "priya singh",
+            "email": "PRIYA.SINGH@YAHOO.COM",
+            "address": "patna, bihar",
+            "year": 4,
+            "course": "b.tech it",
+            "attendance": 94.2,
+            "marks": 82.0,
+            "status": "Active",
+        },
+        {
+            "reg_no": "12019933",
+            "name": "amit kumar",
+            "email": "AMIT.KUMAR@OUTLOOK.COM",
+            "address": "delhi, ncr",
+            "year": 2,
+            "course": "b.tech cse",
+            "attendance": 68.4,
+            "marks": 38.0,
+            "status": "Inactive",
+        },
+        {
+            "reg_no": "12016654",
+            "name": "sneha patel",
+            "email": "SNEHA.PATEL@GMAIL.COM",
+            "address": "ahmedabad, gujarat",
+            "year": 3,
+            "course": "mca",
+            "attendance": 81.6,
+            "marks": 74.5,
+            "status": "Active",
+        },
+        {
+            "reg_no": "12019933",
+            "name": "amit kumar",
+            "email": "AMIT.KUMAR@OUTLOOK.COM",
+            "address": "delhi, ncr",
+            "year": 2,
+            "course": "b.tech cse",
+            "attendance": 68.4,
+            "marks": 38.0,
+            "status": "Inactive",
+        },
         
-#     ]
+    ]
 
-#     context = {
-#         "students": students,
-#     }
-#     return render(request, "students.html", context)
+    context = {
+        "students": students,
+    }
+    return render(request, "students.html", context)
 
 # # ================================= CA Question =================================
 
-def student_result(request):
-    roll = request.GET.get('roll')
-    semester = request.GET.get('semester')
+# def student_result(request):
+#     roll = request.GET.get('roll')
+#     semester = request.GET.get('semester')
     
-    return HttpResponse(f"<h1>Roll {roll} | Semester: {semester}</h1>")
+#     return HttpResponse(f"<h1>Roll {roll} | Semester: {semester}</h1>")
 
 
-def student_profile(request, name):
-    return HttpResponse(f"<h1>Student Profile: {name}</h1>")
+# def student_profile(request, name):
+#     return HttpResponse(f"<h1>Student Profile: {name}</h1>")
 
 
-def student_id(request, student_id):
-    return HttpResponse(f"<h1>Student ID: {student_id}</h1>")
+# def student_id(request, student_id):
+#     return HttpResponse(f"<h1>Student ID: {student_id}</h1>")
 
 
-def student_id_reg(request, student_id_reg):
-    return HttpResponse(f"<h1>Student ID: {student_id_reg}</h1>")
+# def student_id_reg(request, student_id_reg):
+#     return HttpResponse(f"<h1>Student ID: {student_id_reg}</h1>")
+
+
+# # ==================================================================
+
+def result(request):
+    context = {
+        "name" : "Anshu",
+        "marks" : 85,
+    }
+    return render(request, "result.html", context)
+
+
+
