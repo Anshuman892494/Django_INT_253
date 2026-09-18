@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+</head>
+
+<body>
+    <h1>Add New Student</h1>
+
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <label>Roll Number: </label>
+        <input type="text" name="roll_no" placeholder="Enter your roll number">
+        <br><br>
+
+        <label>Name:</label>
+        <input type="text" name="name" placeholder="Enter your name">
+        <br><br>
+
+        <label>Course:</label>
+        <input type="text" name="course" placeholder="Enter your course">
+        <br><br>
+
+        <label>Marks:</label>
+        <input type="text" name="marks" placeholder="Enter your marks">
+        <br><br>
+
+        <button type="submit">Add Student</button>
+    </form>
+
+    <hr>
+
+    <div>
+        <h1>Student Submitted</h1>
+        <h2>Name: {{name}}</h2>
+        <h2>Roll Number: {{roll_no}}</h2>
+        <h2>Course: {{course}}</h2>
+        <h2>Makrs: {{marks}}</h2>
+    </div>
+
+
+</body>
+
+</html>

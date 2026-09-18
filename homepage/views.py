@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse("<h1>Welcome to My Homepage!</h1>")
+    return HttpResponse("<h1>Hey Anshu!</h1>")
 
 # def about(request):
 #     return HttpResponse("<h1>About Us Page</h1>")
@@ -115,140 +115,140 @@ def home(request):
 
 # Django Templates
 
-def dash(request):
-    context = {
-        "name" : "Anshu"
-    }
-    return render(request, 'dash.html', context)
+# def dash(request):
+#     context = {
+#         "name" : "Anshu"
+#     }
+#     return render(request, 'dash.html', context)
 
 
-def aboutus(request):
-    context = {
-        "name" : "Anshu",
-        "course": "B.Tech CSE",
-        "semester": 7,
-        "marks": 90.56
-    }
-    return render(request, 'aboutus.html', context)
-
-def filterdemo(request):
-    context = {
-        "sname" : "Anshu",
-        "surname" : "Verma",
-        "city": "Ballia",
-        "State": "Uttar Pradesh",
-        "class" : 12,
-        "subjects" : [
-            "Hindi",
-            "English",
-            "Maths",
-            "Science"
-        ]
-
-    }
-    return render(request,'filterDemo.html', context)
-
-
-# For Loop
-def menu_view(request):
-    menu = [
-        "Pizza",
-        "Burger",
-        "Pasta",
-        "Tea"
-    ]
-    context = {
-        "menu" : menu
-    }
-    return render(request, "menu.html", context)
-
-# def result(request):
+# def aboutus(request):
 #     context = {
 #         "name" : "Anshu",
-#         "marks" : 85,
+#         "course": "B.Tech CSE",
+#         "semester": 7,
+#         "marks": 90.56
 #     }
-#     return render(request, "result.html", context)
+#     return render(request, 'aboutus.html', context)
+
+# def filterdemo(request):
+#     context = {
+#         "sname" : "Anshu",
+#         "surname" : "Verma",
+#         "city": "Ballia",
+#         "State": "Uttar Pradesh",
+#         "class" : 12,
+#         "subjects" : [
+#             "Hindi",
+#             "English",
+#             "Maths",
+#             "Science"
+#         ]
+
+#     }
+#     return render(request,'filterDemo.html', context)
 
 
-def extend_demo(request):
-    return render(request, "extend_demo.html")
+# # For Loop
+# def menu_view(request):
+#     menu = [
+#         "Pizza",
+#         "Burger",
+#         "Pasta",
+#         "Tea"
+#     ]
+#     context = {
+#         "menu" : menu
+#     }
+#     return render(request, "menu.html", context)
+
+# # def result(request):
+# #     context = {
+# #         "name" : "Anshu",
+# #         "marks" : 85,
+# #     }
+# #     return render(request, "result.html", context)
 
 
-def students_profile(request):
-    students = [
-        {
-            "reg_no": "12015678",
-            "name": "anshu verma",
-            "email": "ANSHU.VERMA@LPU.IN",
-            "address": "ballia, uttar pradesh",
-            "year": 4,
-            "course": "b.tech cse",
-            "attendance": 88.5,
-            "marks": 92.4,
-            "status": "Active",
-        },
-        {
-            "reg_no": "12018942",
-            "name": "rahul sharma",
-            "email": "RAHUL.SHARMA@GMAIL.COM",
-            "address": "jalandhar, punjab",
-            "year": 3,
-            "course": "bca",
-            "attendance": 71.0,
-            "marks": 64.5,
-            "status": "Active",
-        },
-        {
-            "reg_no": "12014421",
-            "name": "priya singh",
-            "email": "PRIYA.SINGH@YAHOO.COM",
-            "address": "patna, bihar",
-            "year": 4,
-            "course": "b.tech it",
-            "attendance": 94.2,
-            "marks": 82.0,
-            "status": "Active",
-        },
-        {
-            "reg_no": "12019933",
-            "name": "amit kumar",
-            "email": "AMIT.KUMAR@OUTLOOK.COM",
-            "address": "delhi, ncr",
-            "year": 2,
-            "course": "b.tech cse",
-            "attendance": 68.4,
-            "marks": 38.0,
-            "status": "Inactive",
-        },
-        {
-            "reg_no": "12016654",
-            "name": "sneha patel",
-            "email": "SNEHA.PATEL@GMAIL.COM",
-            "address": "ahmedabad, gujarat",
-            "year": 3,
-            "course": "mca",
-            "attendance": 81.6,
-            "marks": 74.5,
-            "status": "Active",
-        },
-        {
-            "reg_no": "12019933",
-            "name": "amit kumar",
-            "email": "AMIT.KUMAR@OUTLOOK.COM",
-            "address": "delhi, ncr",
-            "year": 2,
-            "course": "b.tech cse",
-            "attendance": 68.4,
-            "marks": 38.0,
-            "status": "Inactive",
-        },
+# def extend_demo(request):
+#     return render(request, "extend_demo.html")
+
+
+# def students_profile(request):
+#     students = [
+#         {
+#             "reg_no": "12015678",
+#             "name": "anshu verma",
+#             "email": "ANSHU.VERMA@LPU.IN",
+#             "address": "ballia, uttar pradesh",
+#             "year": 4,
+#             "course": "b.tech cse",
+#             "attendance": 88.5,
+#             "marks": 92.4,
+#             "status": "Active",
+#         },
+#         {
+#             "reg_no": "12018942",
+#             "name": "rahul sharma",
+#             "email": "RAHUL.SHARMA@GMAIL.COM",
+#             "address": "jalandhar, punjab",
+#             "year": 3,
+#             "course": "bca",
+#             "attendance": 71.0,
+#             "marks": 64.5,
+#             "status": "Active",
+#         },
+#         {
+#             "reg_no": "12014421",
+#             "name": "priya singh",
+#             "email": "PRIYA.SINGH@YAHOO.COM",
+#             "address": "patna, bihar",
+#             "year": 4,
+#             "course": "b.tech it",
+#             "attendance": 94.2,
+#             "marks": 82.0,
+#             "status": "Active",
+#         },
+#         {
+#             "reg_no": "12019933",
+#             "name": "amit kumar",
+#             "email": "AMIT.KUMAR@OUTLOOK.COM",
+#             "address": "delhi, ncr",
+#             "year": 2,
+#             "course": "b.tech cse",
+#             "attendance": 68.4,
+#             "marks": 38.0,
+#             "status": "Inactive",
+#         },
+#         {
+#             "reg_no": "12016654",
+#             "name": "sneha patel",
+#             "email": "SNEHA.PATEL@GMAIL.COM",
+#             "address": "ahmedabad, gujarat",
+#             "year": 3,
+#             "course": "mca",
+#             "attendance": 81.6,
+#             "marks": 74.5,
+#             "status": "Active",
+#         },
+#         {
+#             "reg_no": "12019933",
+#             "name": "amit kumar",
+#             "email": "AMIT.KUMAR@OUTLOOK.COM",
+#             "address": "delhi, ncr",
+#             "year": 2,
+#             "course": "b.tech cse",
+#             "attendance": 68.4,
+#             "marks": 38.0,
+#             "status": "Inactive",
+#         },
         
-    ]
+#     ]
 
-    context = {
-        "students": students,
-    }
-    return render(request, "students.html", context)
+#     context = {
+#         "students": students,
+#     }
+#     return render(request, "students.html", context)
 
 # # ================================= CA Question =================================
 
@@ -273,12 +273,64 @@ def students_profile(request):
 
 # # ==================================================================
 
-def result(request):
-    context = {
-        "name" : "Anshu",
-        "marks" : 85,
-    }
-    return render(request, "result.html", context)
+# def result(request):
+#     context = {
+#         "name" : "Anshu",
+#         "marks" : 85,
+#     }
+#     return render(request, "result.html", context)
 
 
+# ======================================================================== UNIT 4 - FORM
 
+from django.middleware.csrf import get_token
+
+def simple_form(request):
+    token = get_token(request)
+    if request.method == "POST":
+        print("POST Data:", request.POST)
+        name = request.POST.get('name')
+        print("Name:", name)
+        return HttpResponse(f"<h1>Hey {name} 😉</h1>")
+
+    return HttpResponse(
+    f"""
+    <form action="" method="post">
+        <input type="hidden" name="csrfmiddlewaretoken" value="{token}">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    """
+    )
+
+
+def stu_form(request):
+    token = get_token(request)
+    if request.method == "POST":
+        print("POST Data:", request.POST)
+        roll_no = request.POST.get('roll_no')
+        name = request.POST.get('name')
+        course = request.POST.get('course')
+        marks = request.POST.get('marks')
+        print("Roll No:", roll_no)
+        print("Name:", name)
+        print("Course:", course)
+        print("Marks:", marks)  
+
+        data = {
+            "roll_no":roll_no,
+            "name": name,
+            "marks": marks,
+            "course": course,
+        }
+        # return HttpResponse(f"""
+        # <h1>Hey {name} 😉</h1>
+        # <h2>Roll Number: {roll_no} </h2>
+        # <h2>Course: {course} </h2>
+        # <h2>Marks: {marks} </h2>
+        # <a href="/stu_form">Go back</a>
+        # """)
+        return render(request, "stu_form.html", data)
+    return render(request, 'stu_form.html')
