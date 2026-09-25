@@ -1,3 +1,4 @@
+from django.utils import datastructures
 from decimal import Context
 from django.shortcuts import render
 
@@ -334,3 +335,38 @@ def stu_form(request):
         # """)
         return render(request, "stu_form.html", data)
     return render(request, 'stu_form.html')
+
+# ============================================================================== 
+
+from .forms import StudentForm, CourseEnrollmentForm
+
+def stu_form_view(request):
+    if request.method == "POST":
+        form = StudentForm(request.POST)
+        if form.is_valid():
+            roll_no = form.cleaned_data['roll_no']
+            name = form.cleaned_data['name']
+            # print("Roll No:", roll_no)
+            # print("Name:", name)
+            # return HttpResponse(f"<h1>Hey {name}, your roll number is {roll_no}</h1>")
+            return render(request, "form.html", {'name': name, 'roll_no': roll_no})
+    else:
+        form = StudentForm() 
+    return render(request, "form.html", {"form": form})
+
+
+def course_enrollment_view(request):
+    if request.method == "POST":
+        form = CourseEnrollmentForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+            return render(request, "course_enrollment.html", {
+                "form": form,
+                "submitted": True,
+                "data": data,
+            })
+    else:
+        form = CourseEnrollmentForm()
+
+    return render(request, "course_enrollment.html", {"form": form, "submitted": False})
+

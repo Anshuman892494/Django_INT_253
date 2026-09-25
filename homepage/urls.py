@@ -89,6 +89,12 @@ urlpatterns = [
 
     path('stu_form/', views.stu_form, name='stu_form'),
 
+    path('myform/', views.stu_form_view, name='myform'),
+
+    path('enroll/', views.course_enrollment_view, name='course_enrollment'),
+
+
+
 
 
 

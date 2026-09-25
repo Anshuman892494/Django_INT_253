@@ -14,19 +14,20 @@
         {% csrf_token %}
 
         <label>Roll Number: </label>
-        <input type="text" name="roll_no" placeholder="Enter your roll number">
+        <input type="text" name="roll_no" placeholder="Enter your roll number" required minlength="6" maxlength="6"
+            pattern="[0-9]{6}">
         <br><br>
 
         <label>Name:</label>
-        <input type="text" name="name" placeholder="Enter your name">
+        <input type="text" name="name" placeholder="Enter your name" required minlength="3" maxlength="20">
         <br><br>
 
         <label>Course:</label>
-        <input type="text" name="course" placeholder="Enter your course">
+        <input type="text" name="course" placeholder="Enter your course" required minlength="3" maxlength="50">
         <br><br>
 
         <label>Marks:</label>
-        <input type="text" name="marks" placeholder="Enter your marks">
+        <input type="text" name="marks" placeholder="Enter your marks" required minlength="1" maxlength="80">
         <br><br>
 
         <button type="submit">Add Student</button>

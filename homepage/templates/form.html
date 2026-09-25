@@ -1,0 +1,15 @@
+<form method="POST">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">Submit</button>
+
+</form>
+<hr>
+<div>
+    <h1>Form Submitted Successfully</h1>
+    <h2>Name: {{name}}</h2>
+    <h2>Roll Number: {{roll_no}}</h2>
+</div>

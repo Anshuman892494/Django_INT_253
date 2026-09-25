@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Enrollment Form</title>
+</head>
+<body>
+
+    <h1>Course Enrollment Form</h1>
+
+    <!-- Form -->
+    <form method="POST">
+        {% csrf_token %}
+        
+        {{ form.as_p }}
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <hr>
+
+    <!-- Submitted Data Output -->
+    {% if submitted %}
+        <h2>Form Submitted Successfully!</h2>
+        <p><strong>Name:</strong> {{ data.name }}</p>
+        <p><strong>Email:</strong> {{ data.email }}</p>
+        <p><strong>Age:</strong> {{ data.age }}</p>
+        <p><strong>Date of Birth:</strong> {{ data.dob }}</p>
+        <p><strong>Gender:</strong> {{ data.gender }}</p>
+        <p><strong>Course:</strong> {{ data.course }}</p>
+        <p><strong>Hobbies:</strong> 
+            {% for hobby in data.hobbies %}
+                {{ hobby }}{% if not forloop.last %}, {% endif %}
+            {% empty %}
+                None
+            {% endfor %}
+        </p>
+        <p><strong>About:</strong> {{ data.about }}</p>
+    {% endif %}
+
+</body>
+</html>
