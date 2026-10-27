@@ -38,4 +38,4 @@ class CourseEnrollmentForm(forms.Form):
     hobbies = forms.MultipleChoiceField(choices=HOBBY_CHOICES, widget=forms.CheckboxSelectMultiple, required=False, label="Hobbies")
     about = forms.CharField(widget=forms.Textarea(attrs={'rows': 4}), required=False, label="About (Description)")
 
-
+
